@@ -1,0 +1,6 @@
+{
+  "name": "Discord Clone",
+  "description": "A fully-featured multi-user Discord clone supporting custom servers, channels, real-time rich chat, Nitro stickers, and voice/direct phone calls.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

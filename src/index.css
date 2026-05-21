@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-discord-blurple: #5865f2;
+  --color-discord-green: #23a55a;
+  --color-discord-yellow: #f0b232;
+  --color-discord-red: #f23f43;
+  --color-discord-dark-server: #1e1f22;
+  --color-discord-dark-sidebar: #2b2d31;
+  --color-discord-dark-chat: #313338;
+  --color-discord-dark-member: #2b2d31;
+}
+
+/* Custom CSS Animations */
+@keyframes ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(35, 165, 90, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(35, 165, 90, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(35, 165, 90, 0);
+  }
+}
+
+.animate-ring-pulse {
+  animation: ring-pulse 1.5s infinite;
+}
+
+@keyframes call-ring {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(88, 101, 242, 0);
+  }
+}
+
+.animate-call-ring {
+  animation: call-ring 2s infinite;
+}
+
+/* Custom scrollbar behaviors */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e3035;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1b1e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111214;
+}
+
+/* Custom audio-visualizer peak styles */
+.speaking-wave-bar {
+  display: inline-block;
+  width: 3px;
+  background-color: #23a55a;
+  margin: 0 1px;
+  border-radius: 2px;
+  transition: height 0.1s ease;
+}
